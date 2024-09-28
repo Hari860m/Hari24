@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  </title>
+    <script>
+        {
+            var data = [
+  {
+    "ID": 1,
+    "name": "orange",
+    "quantity":"1kg",
+    "rate": "520",
+   
+  },
+  {
+    "ID": 2,
+    "name": "grap",
+    "quantity":"1kg",
+    "rate": "26",
+    
+  },
+  {
+    "ID": 3,
+    "name": "jackfriut",
+    "quantity":"55kg",
+    "rate": "180",
+    
+  },
+];
+
+var a = [];
+
+document.write("<table border><tr>");
+for (s in data[0]) {
+	document.write('<td>' + s + '</td>');
+}
+document.write("</tr>");
+for (var i = 0; i < data.length; i++) {
+	document.write('<tr>');
+	for (m in data[i]) {
+  	document.write('<td>' + data[i][m] + '</td>');
+  }
+	document.write('</tr>');
+}
+document.write("</table>");
+        }
+    </script>
+</head>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <title>To Do List</title>
+</head>
+<script>
+    var tasks=[]
+    function print(){
+        document.getElementById("task list").innerHTML=''
+        for(i in tasks){
+            document.getElementById("task list").innerHTML+= i + ') ' + tasks[i] + '<br>'
+        }
+    }
+    function add(){
+        if(document.getElementById("task").value!=''){
+            tasks.push(document.getElementById("task").value)
+            document.getElementById("task").value=''
+            print()
+        }
+    }
+    function pop(){
+        if(parseInt(document.getElementById("task value)<tasks.length){
+            tasks.splice(document.getElementById("task").value,1)
+            document.getElementById("task").value=''
+            print()
+        }  
+    }
+</script>
+<body>
+    <div>
+        <input type="text" id="task" placeholder="Enter your task here.">
+        <input type="button" onclick="add()" value="Add">
+        <input type="button" onclick="pop()" value="Remove">
+        <h3>Tasks:</h3>
+        <p id="task list"></p>
+    </div>
+</body>
+</html>
